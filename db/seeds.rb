@@ -8,15 +8,24 @@
 
 User.create!(name: "Honsan Sokatan", email: "honsan@sokatan.com", password: "123456", password_confirmation: "123456", admin: true, activated: true, activated_at: Time.zone.now)
 
-99.times do |n|
+35.times do |n|
 	name = Faker::Name.name
 	email = "honsan-#{n+1}@sokatan.com"
 	password = "password"
 	User.create!(name: name, email: email, password: password, password_confirmation: password, activated: true, activated_at: Time.zone.now)
 end
 
+# Micropost
 users = User.order(:created_at).take(6)
-50.times do
+35.times do
 	content = Faker::Lorem.sentence(word_count: 5)
 	users.each { |user| user.microposts.create!(content: content)  }
 end
+
+# Following usrs
+users = User.all
+user = users.first
+following = users[2..34]
+followers = users[3..22]
+following.each { |followed| user.follow(followed)  }
+followers.each { |follower| follower.follow(user)  }

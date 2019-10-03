@@ -1,0 +1,15 @@
+one:
+  follower: jether
+  followed: lana
+
+two:
+  follower: jether
+  followed: malory
+
+three:
+  follower: lana
+  followed: jether
+
+four:
+  follower: archer
+  followed: jether
