@@ -24,7 +24,7 @@ gem 'bcrypt', '~> 3.1.7'
 
 gem 'uglifier', '~> 4.1.20'
 gem 'faker' , '~> 2.2.2'
-gem 'carrierwave', '~> 2.0.1'
+gem 'carrierwave', '~> 2.1.1'
 gem 'mini_magick', '~> 4.9.5'
 gem 'fog', '~> 2.2.0'
 gem 'will_paginate', '~> 3.1.8'
